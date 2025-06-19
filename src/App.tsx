@@ -1,15 +1,24 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Header from './components/Header';
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from 'react-router-dom';
+
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 import Footer from './components/Footer';
+import Header from './components/Header';
+import Brands from './pages/Brands';
+import Contact from './pages/Contact';
+import ExpertsInfluencers from './pages/ExpertsInfluencers';
+import Features from './pages/Features';
 import Home from './pages/Home';
 import HowItWorks from './pages/HowItWorks';
-import Solutions from './pages/Solutions';
-import ExpertsInfluencers from './pages/ExpertsInfluencers';
-import Brands from './pages/Brands';
-import Features from './pages/Features';
 import Pricing from './pages/Pricing';
-import Contact from './pages/Contact';
+import Solutions from './pages/Solutions';
 
 // Component to handle scroll to top on route change
 function ScrollToTop() {
@@ -27,6 +36,7 @@ function App() {
     <Router>
       <div className="min-h-screen bg-background">
         <ScrollToTop />
+        <SpeedInsights />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
