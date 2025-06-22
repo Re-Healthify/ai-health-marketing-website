@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 import {
   BrowserRouter as Router,
@@ -6,8 +6,6 @@ import {
   Routes,
   useLocation,
 } from 'react-router-dom';
-
-import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -37,8 +35,6 @@ function App() {
       <div className="min-h-screen bg-background">
         <ScrollToTop />
         
-        <SpeedInsights />
-
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
