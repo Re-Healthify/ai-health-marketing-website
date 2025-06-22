@@ -34,7 +34,6 @@ function App() {
     <Router>
       <div className="min-h-screen bg-background">
         <ScrollToTop />
-        
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
